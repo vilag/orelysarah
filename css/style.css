@@ -783,7 +783,7 @@ ul.polaroids li {
 /* =========================== Quote ============================ */
 
 #quote {
-    background: url('../img/bgcall.jpg.jpeg') no-repeat;
+    background: url('../img/back.png') no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

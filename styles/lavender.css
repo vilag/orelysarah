@@ -215,12 +215,12 @@ body,
     transform: scaleX(-1);
 }
 .ornament2 {
-    background-image: url('../img/ornaments/lavender/ornament2.png');
+    background-image: url('../img/ornaments/lavender/ornament2_1.png');
     width: 280px;
     height: 410px;
 }
 .ornament3 {
-    background-image: url('../img/ornaments/lavender/ornament3.png');
+    background-image: url('../img/ornaments/lavender/ornament3_1.png');
     width: 350px;
     height: 291px;
 }
