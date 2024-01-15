@@ -4,6 +4,7 @@ Author: Ingrid Kuhn
 Author URI: themeforest/user/ingridk
 Version: 1.0
 */
+//alert("entra");
 
 "use strict";
 $(document).ready(function() {
