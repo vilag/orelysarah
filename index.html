@@ -52,6 +52,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
       <!-- END Demo Examples -->
       <script src="js/main.js"></script>
+      <script src="js/jquery.min.js"></script>
    </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom" style="background-color: rgba(252, 249, 234, 0.5); background-image: none !important;">
       <!-- Start Switcher -->
@@ -108,7 +109,7 @@
                <div class="navbar-brand navbar-brand-centered page-scroll">
                   <a href="https://www.ingridkuhn.com/themes/liebe_html/index.html#page-top">
                      <!-- logo  -->  
-                     <img src="./img/logo/logo.png" class="img-responsive" alt="">
+                     <img src="./img/logo/logo_boda.png" class="img-responsive" alt="">
                   </a>
                </div>
                <!--/navbar-brand -->
@@ -142,6 +143,7 @@
       </nav>
       <!-- /navbar ends --> 
       <!-- section: intro--> 
+      
       <section id="intro" class="container-fluid">
          <!-- parallax ornament -->
          <!-- <div class="ornament1 hidden-sm hidden-xs hidden-md" data-100="transform:translatey(150%);" data-center-center="transform:translatey(-10%);"> -->
@@ -166,7 +168,7 @@
          </div>
          <!--/main picture-->
          <div class="intro-heading col-md-12 text-center" data-0="opacity:1;" data--100-start="transform:translatey(0%);" data-center-bottom="transform:translatey(30%);">
-            <h1 style="font-family: 'Great Vibes', cursive;">Sarah & Orel
+            <h1 style="font-family: 'Great Vibes', cursive;">Nuestra Boda
             </h1>
             <!-- <h5 class="margin1 text-ornament">Nos vamos a casar</h5> -->
          </div>
@@ -199,7 +201,7 @@
                      <!-- <div class="hr"></div> -->
                   </div>
                   <!--/section heading -->
-                  <h5 class="margin1">Por favor confirmanos tu asistencia antes del 15 de junio</h5>
+                  <h5 class="margin1">Por favor confirmanos tu asistencia antes del 1 de junio</h5>
                   <p style="font-size: 18px;">
                      Los lugares para el banquete son limitados, aunque quisieramos que todos nuestros amigos estuvieran con nosotros sabemos que no podra ser asi, los lugares apartados para ti y que fueron enviados en la invitacion que se te entrego, son demasiado especiales porque tu lo eres para nosotros, es por eso que es muy importante tu confirmación. Esperamos poder verte ese dia y compartir con nosotros la elgria de este nuevo paso en nuestras vidas. <br> Dios te bendiga.
                   </p>
@@ -562,7 +564,7 @@
                               <div class="member text-center">
                                  <div class="wrap">
                                     <!-- image -->
-                                    <img src="img/attendant6.jpg" alt="" class="img-circle img-responsive">
+                                    <img src="img/caballeros/Jos.png" alt="" class="img-circle img-responsive">
                                     <!-- Info -->
                                     <div class="info">
                                        <h5 class="name">Josafat Vilchis</h5>
@@ -919,21 +921,26 @@
             <!-- /section-heading -->
             <div class="col-lg-5">
                <!-- image -->
-               <img src="img/rsvp2.png" alt="" class="margin1 img-photo rotate2 img-responsive">
+               <img src="img/rsvp3.png" alt="" class="margin1 img-photo rotate2 img-responsive">
             </div>
             <!-- well -->
             <div class="col-lg-7 well">
                <div id="rsvp_form">
                   <div class="form-group text-center">
                      <!-- name field-->
-                     <h5>Nombre Completo<span class="required">*</span></h5>
-                     <input type="text" name="name" class="form-control input-field" required="">  
+                     <h5>Captura tu nombre o numero de invitación</h5>
+                     <input type="text" name="name_num_inv" id="name_num_inv" class="form-control input-field" required="">  
                      <!-- checkbox attending-->
-                     <input id="yes" type="radio" value="Accepts with pleasure" name="attending">
+                     <!-- <input id="yes" type="radio" value="Accepts with pleasure" name="attending">
                      <label for="yes" class="side-label">Acepto con gusto</label>
                      <input id="no" type="radio" value="Declines with regrets" name="attending">
-                     <label for="no" class="side-label">Declinamos con tristeza</label>
+                     <label for="no" class="side-label">Declinamos con tristeza</label> -->
                      <!-- if attending=yes then the form bellow will show -->
+
+                     <div style="width: 100%;" id="lista_inf_group">
+
+                     </div>
+
                      <div class="accept-form">
                         <!-- guests checkbox -->
                         <!-- <h5>Are you bringing guests?<span class="required">*</span></h5> -->
@@ -954,7 +961,8 @@
                      </div>
                      <!--/message-comments -->
                      <div class="text-center">
-                        <button type="submit" id="submit_rsvp" value="Submit" class="btn" style="background-color: #03678a !important;">Submit</button>
+                        <b onclick="buscar_persona();" style="padding: 10px; background-color: #03678a; color: aliceblue;">Buscar</b>
+                        <!-- <button type="submit" id="submit_rsvp" value="Submit" class="btn" style="background-color: #03678a !important;">Submit</button> -->
                      </div>
                      <!-- /col-md-12 -->
                   </div>
@@ -989,6 +997,7 @@
          </div>
          <!-- /.container -->
       </footer>
+      <script type="text/javascript" src="scripts/index.js?v=<?php echo(rand()); ?>"></script>
       <!-- /footer ends -->
       <!-- Core JavaScript Files -->
       <script src="js/jquery.min.js"></script>
