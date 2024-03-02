@@ -60,6 +60,21 @@
             /* font-family: 'Montserrat', sans-serif ; */
             font-family: "Libre Bodoni", serif !important;
          }
+
+         .barra::-webkit-scrollbar {
+            width: 15px;               /* width of the entire scrollbar */
+         }
+
+         .barra::-webkit-scrollbar-track {
+            background: rgba(155, 175, 174, 0.5);        /* color of the tracking area */
+         }
+
+         .barra::-webkit-scrollbar-thumb {
+            background-color: #03678A;    /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            border: 3px solid rgba(155, 168, 175, 0.5);;  /* creates padding around scroll thumb */
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+         }
       </style>
       <!-- Start Switcher -->
       <div class="demo_changer">
@@ -69,21 +84,21 @@
          <!-- end opener icon -->
          <div class="form_holder text-center">
             <div class="row">
-               <div class="col-lg-12">
+               <!-- <div class="col-lg-12">
                   <div class="predefined_styles">
                      <h5>Choose a Color Skin</h5>
-                     <!-- MODULE #3 -->
+                   
                      <a href="https://www.ingridkuhn.com/themes/liebe_html/summer" class="styleswitch"><img src="switcher/images/summer.png" alt="Summer"></a>		
                      <a href="https://www.ingridkuhn.com/themes/liebe_html/serenity" class="styleswitch"><img src="switcher/images/serenity.png" alt="Serenity"></a>		
                      <a href="https://www.ingridkuhn.com/themes/liebe_html/lavender" class="styleswitch"><img src="switcher/images/lavender.png" alt="Lavender"></a>		
-                     <!-- END MODULE #3 -->
+                   
 					  <h5>Choose a Header style</h5>
 					  <div class="headerimg">
 					  <a href="https://www.ingridkuhn.com/themes/liebe_html/index.html"><img src="switcher/images/photoheader.jpg.jpeg" alt="Photo Header" class=""></a>
 					  <a href="https://www.ingridkuhn.com/themes/liebe_html/index2.html"><img src="switcher/images/slideheader.jpg.jpeg" alt="Slide Header" class=""></a>
 					  </div>
                   </div>
-               </div>
+               </div> -->
                <!-- end col -->
             </div>
             <!-- end row -->
@@ -114,7 +129,7 @@
                <i class="fa fa-bars" style="color: #03678A;"></i>
                </button>
                <div class="navbar-brand navbar-brand-centered page-scroll" style="padding-top: 10px !important; padding-left: 20px;">
-                  <a href="index.html" >
+                  <a href="index.php" >
                      <!-- logo  -->  
                      <img src="./img/logo/logo_boda.png" class="img-responsive" alt="" >
                   </a>
@@ -125,9 +140,9 @@
             <!-- Collect the nav links, forms, and other content for toggling  --> 
             <div class="collapse navbar-collapse" id="navbar-brand-centered">
                <ul class="nav navbar-nav page-scroll">
-                  <li class="active"><a href="index.html" class="estilo_menu">Inicio</a></li>
-                  <li><a href="index.html#about" class="estilo_menu">Nosotros</a></li>
-                  <li><a href="https://www.ingridkuhn.com/themes/liebe_html/index.html#story" class="estilo_menu">Nuestra Historia</a></li>
+                  <li class="active"><a href="index.php" class="estilo_menu">Inicio</a></li>
+                  <li><a href="index.php#about" class="estilo_menu">Nosotros</a></li>
+                  <li><a href="index.php#story" class="estilo_menu">Nuestra Historia</a></li>
                   <!-- <li><a href="#attendants">Attendants</a></li> -->
                </ul>
                <ul class="nav navbar-nav navbar-right page-scroll">
@@ -177,6 +192,7 @@
          <div style="margin-top: 40px;;" class="intro-heading col-md-12 text-center" data-0="opacity:1;" data--100-start="transform:translatey(0%);" data-center-bottom="transform:translatey(30%);">
             <h1 style="font-family: 'Alex Brush', cursive; text-transform: none;">Nuestra Boda
             </h1>
+            <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
             <!-- <h5 class="margin1 text-ornament">Nos vamos a casar</h5> -->
          </div>
          <!-- /col-md-6-->
@@ -991,9 +1007,26 @@
             <div class="col-lg-7 well">
                <div id="rsvp_form">
                   <div class="form-group text-center">
+                     <h5>Hemos Reservado</h5>
+                     <h1 style="margin-top: 5px;" id="cant_personas"></h1>
+                     <h3>Lugares en tu honor</h3>
+                     <hr>
+                     <h5 style="line-height: 30px;">Por favor confirma la asistencia por cada lugar reservado</h5>
+                     <div  style="width: 100%;" id="lista_inf_group">
+
+                     </div>
+                     <hr>
+                     <h5 style="color: rgba(0,0,0,0);">___________</h5>
+                     <div style="width: 100%; margin-top: 20px;">
+                        <b style="padding: 10px 40px; background-color: #03678A; color: #fff; font-size: 20px; border-radius: 10px;">Enviar confirmación</b>
+                     </div>
+                     
+
+
+
                      <!-- name field-->
-                     <h5 class="estilo_texto">Captura tu nombre o numero de invitación</h5>
-                     <input type="text" name="name_num_inv" id="name_num_inv" class="form-control input-field" required="">  
+                     <!-- <h5 class="estilo_texto">Captura tu nombre o numero de invitación</h5>
+                     <input type="text" name="name_num_inv" id="name_num_inv" class="form-control input-field" required="">   -->
                      <!-- checkbox attending-->
                      <!-- <input id="yes" type="radio" value="Accepts with pleasure" name="attending">
                      <label for="yes" class="side-label">Acepto con gusto</label>
@@ -1001,9 +1034,7 @@
                      <label for="no" class="side-label">Declinamos con tristeza</label> -->
                      <!-- if attending=yes then the form bellow will show -->
 
-                     <div style="width: 100%;" id="lista_inf_group">
-
-                     </div>
+                     
 
                      <div class="accept-form">
                         <!-- guests checkbox -->
@@ -1019,15 +1050,15 @@
                      </div>
                      <!--/accept form -->
                      <!-- if attending=no then only the message box will show -->
-                     <div class="message-comments">
+                     <!-- <div class="message-comments">
                         <h5 class="estilo_texto">Mensaje</h5>
                         <textarea name="message" id="message-box" class="textarea-field form-control" rows="3"></textarea>
-                     </div>
+                     </div> -->
                      <!--/message-comments -->
-                     <div class="text-center">
+                     <!-- <div class="text-center">
                         <b class="estilo_texto" onclick="buscar_persona();" style="padding: 10px; background-color: #03678a; color: aliceblue;">Buscar</b>
-                        <!-- <button type="submit" id="submit_rsvp" value="Submit" class="btn" style="background-color: #03678a !important;">Submit</button> -->
-                     </div>
+                        <button type="submit" id="submit_rsvp" value="Submit" class="btn" style="background-color: #03678a !important;">Submit</button>
+                     </div> -->
                      <!-- /col-md-12 -->
                   </div>
                   <!-- /Form-group -->

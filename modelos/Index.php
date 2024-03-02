@@ -18,6 +18,22 @@ Class Index
 		return ejecutarConsulta($sql);			
 	}
 
+	public function listar_grupo($idgrupo)
+	{
+
+		$sql="SELECT * FROM invitados WHERE codigo_comp = '$idgrupo'";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
+	public function contar_lugares($idgrupo)
+	{
+
+		$sql="SELECT count(idinvitados) as cant_personas FROM invitados WHERE codigo_comp = '$idgrupo'";
+		return ejecutarConsultaSimpleFila($sql);
+		//return ejecutarConsulta($sql);			
+	}
+
 
 }
 ?>
