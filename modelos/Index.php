@@ -34,6 +34,14 @@ Class Index
 		//return ejecutarConsulta($sql);			
 	}
 
+	public function listar_grupo_send()
+	{
+
+		$sql="SELECT idinvitados ,codigo_comp, tipo_impresion FROM invitados GROUP BY codigo_comp";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
 
 }
 ?>
