@@ -23,6 +23,66 @@ switch ($_GET["op"]){
             
         while ($reg = $rspta->fetch_object())
                 {
+
+                    if ($reg->confirmacion==1) {
+                        $estilo_confirm = "
+                            padding: 10px 30px; 
+                            cursor: pointer; 
+                            border: #2D5883 1px solid; 
+                            border-radius: 10px;
+                            margin: 5px;
+                            background-color: #639CC3;
+                            color: #fff;
+                        ";
+                        $estilo_confirm2 = "
+                            padding: 10px 30px; 
+                            cursor: pointer; 
+                            border: #2D5883 1px solid; 
+                            border-radius: 10px;
+                            margin: 5px;
+                        ";
+                    }
+
+                    if ($reg->confirmacion==2) {
+                        $estilo_confirm = "
+                            padding: 10px 30px; 
+                            cursor: pointer; 
+                            border: #2D5883 1px solid; 
+                            border-radius: 10px;
+                            margin: 5px;
+                        ";
+                        $estilo_confirm2 = "
+                            padding: 10px 30px; 
+                            cursor: pointer; 
+                            border: #2D5883 1px solid; 
+                            border-radius: 10px;
+                            margin: 5px;
+                            background-color: #639CC3;
+                            color: #fff;
+                        ";
+                    }
+
+                    if ($reg->confirmacion==0) {
+                        $estilo_confirm = "
+                        padding: 10px 30px; 
+                        cursor: pointer; 
+                        border: #2D5883 1px solid; 
+                        border-radius: 10px;
+                        margin: 5px;
+                        background-color: rgba(0,0,0,0);
+                        color: #000;
+                        ";
+                        $estilo_confirm2 = "
+                        padding: 10px 30px; 
+                        cursor: pointer; 
+                        border: #2D5883 1px solid; 
+                        border-radius: 10px;
+                        margin: 5px;
+                        background-color: rgba(0,0,0,0);
+                        color: #000;
+                        ";
+                    }
+
                     echo '
 
                    
@@ -32,8 +92,9 @@ switch ($_GET["op"]){
                                 <label style="font-size: 18px !important; color: rgba(0,0,0,1); cursor: pointer;">'.$reg->nombre.'</label>
                                 <br>
                                
-                                <b onmouseenter="btn_enter('.$reg->idinvitados.')" onmouseleave="btn_leave('.$reg->idinvitados.')" id="btn_confirm'.$reg->idinvitados.'" class="estilo_btn_confirm" onclick="asistir('.$reg->idinvitados.');">Asistiré</b>
-                                <b onmouseenter="btn_enter2('.$reg->idinvitados.')" onmouseleave="btn_leave2('.$reg->idinvitados.')" id="btn_noconfirm'.$reg->idinvitados.'" class="estilo_btn_confirm" onclick="noasistir('.$reg->idinvitados.');">No Asistiré</b>
+                                <b style="'.$estilo_confirm.'" onmouseenter="btn_enter('.$reg->idinvitados.',\''.$reg->confirmacion.'\')" onmouseleave="btn_leave('.$reg->idinvitados.',\''.$reg->confirmacion.'\')" id="btn_confirm'.$reg->idinvitados.'" onclick="asistir('.$reg->idinvitados.');">Asistiré</b>
+                                <b style="'.$estilo_confirm2.'" onmouseenter="btn_enter2('.$reg->idinvitados.',\''.$reg->confirmacion.'\')" onmouseleave="btn_leave2('.$reg->idinvitados.',\''.$reg->confirmacion.'\')" id="btn_noconfirm'.$reg->idinvitados.'" onclick="noasistir('.$reg->idinvitados.');">No Asistiré</b>
+                                
                                 <input id="input_confirm'.$reg->idinvitados.'" type="hidden" value="0">
                             </div>
                           

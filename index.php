@@ -1018,7 +1018,7 @@
                      <hr>
                      <h5 style="color: rgba(0,0,0,0);">___________</h5>
                      <div style="width: 100%; margin-top: 20px;">
-                        <b style="padding: 10px 40px; background-color: #03678A; color: #fff; font-size: 20px; border-radius: 10px;">Enviar confirmación</b>
+                        <b onclick="guardar_confirmacion();" style="padding: 10px 40px; background-color: #03678A; color: #fff; font-size: 20px; border-radius: 10px; cursor: pointer;">Enviar confirmación</b>
                      </div>
                      
 
@@ -1074,31 +1074,28 @@
       <!-- /Section ends -->
       <style>
          .estilo_btn_confirm{
-            padding: 10px 30px; 
-            cursor: pointer; 
-            border: #2D5883 1px solid; 
-            border-radius: 10px;
-            margin: 5px;
+            padding: 10px 30px !important; 
+            cursor: pointer !important; 
+            border: #2D5883 1px solid !important; 
+            border-radius: 10px !important;
+            margin: 5px !important;
+            background-color: rgba(0,0,0,0) !important;
+            color: #000 !important;
          }
          .estilo_btn_confirm_hover{
-            padding: 10px 30px; 
-            cursor: pointer; 
-            border: #2D5883 2px solid; 
-            border-radius: 10px;
-            margin: 5px;
-            /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
-            /* background-color: #038AAE;
-            color: #fff; */
+
+            border: #2D5883 2px solid !important; 
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
          }
          .estilo_btn_confirm_select{
-            padding: 10px 30px; 
-            cursor: pointer; 
-            border: #2D5883 1px solid; 
-            border-radius: 10px;
-            margin: 5px;
+            padding: 10px 30px !important; 
+            cursor: pointer !important; 
+            border: #2D5883 1px solid !important; 
+            border-radius: 10px !important;
+            margin: 5px !important;
             /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
-            background-color: #038AAE;
-            color: #fff;
+            background-color: #639CC3 !important;
+            color: #fff !important;
          }
       </style>
       <!-- Section: Quote -->

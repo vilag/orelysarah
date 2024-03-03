@@ -41,29 +41,54 @@ function contar_lugares()
     });
 }
 
-function btn_enter(idinvitados)
+function btn_enter(idinvitados,confirmacion)
 {
-    $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm').addClass('estilo_btn_confirm_hover');
+    if (confirmacion<0) {
+        $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm').addClass('estilo_btn_confirm_hover');
+    }else{
+        $("#btn_confirm"+idinvitados).addClass('estilo_btn_confirm_hover');
+    }
+    
 }
-function btn_leave(idinvitados)
+function btn_leave(idinvitados,confirmacion)
 {
-    $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm_hover').addClass('estilo_btn_confirm');
+    if (confirmacion<0) {
+        $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm_hover').addClass('estilo_btn_confirm');
+    }else{
+        $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm_hover');
+    }
+    
 }
-function btn_enter2(idinvitados)
+function btn_enter2(idinvitados,confirmacion)
 {
-    $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm').addClass('estilo_btn_confirm_hover');
+    if (confirmacion<0) {
+        $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm').addClass('estilo_btn_confirm_hover');
+    }else{
+        $("#btn_noconfirm"+idinvitados).addClass('estilo_btn_confirm_hover');
+    }
+    
 }
-function btn_leave2(idinvitados)
+function btn_leave2(idinvitados,confirmacion)
 {
-    $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_hover').addClass('estilo_btn_confirm');
+    if (confirmacion<0) {
+        $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_hover').addClass('estilo_btn_confirm');
+    }else{
+        $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_hover');
+    }
+    
 }
 
 function asistir(idinvitados)
 {
    // alert(idinvitados);
     $("#input_confirm"+idinvitados).val("1");
-    $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm estilo_btn_confirm_hover').addClass('estilo_btn_confirm_select');
-    $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_select estilo_btn_confirm_hover').addClass('estilo_btn_confirm');
+    $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm');
+    $("#btn_confirm"+idinvitados).removeClass('estilo_btn_confirm_hover');
+    $("#btn_confirm"+idinvitados).addClass('estilo_btn_confirm_select');
+
+    $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_select');
+    $("#btn_noconfirm"+idinvitados).removeClass('estilo_btn_confirm_hover');
+    $("#btn_noconfirm"+idinvitados).addClass('estilo_btn_confirm');
     
     elementIndex = confirm_group.findIndex((obj => obj.idinvitados == idinvitados));
     console.log(elementIndex);
@@ -93,14 +118,26 @@ function noasistir(idinvitados)
     if (elementIndex<0) {
         var confirm_persona = {
             idinvitados:idinvitados,
-            confirmacion:0
+            confirmacion:2
         }
         confirm_group.push(confirm_persona);
     }else{
-        confirm_group[elementIndex].confirmacion = 0;
+        confirm_group[elementIndex].confirmacion = 2;
     }
 
     console.log(confirm_group);
+}
+
+function guardar_confirmacion()
+{
+    $.ajax({
+        type: "POST",
+        url: "ajax/guardar_confirm.php",
+        data: {'array': JSON.stringify(confirm_group)},//capturo array
+        success: function(data){
+            alert(data);
+        }
+    });
 }
 
 init();
