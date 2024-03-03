@@ -1072,6 +1072,35 @@
          <!-- /container -->
       </section>
       <!-- /Section ends -->
+      <style>
+         .estilo_btn_confirm{
+            padding: 10px 30px; 
+            cursor: pointer; 
+            border: #2D5883 1px solid; 
+            border-radius: 10px;
+            margin: 5px;
+         }
+         .estilo_btn_confirm_hover{
+            padding: 10px 30px; 
+            cursor: pointer; 
+            border: #2D5883 2px solid; 
+            border-radius: 10px;
+            margin: 5px;
+            /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
+            /* background-color: #038AAE;
+            color: #fff; */
+         }
+         .estilo_btn_confirm_select{
+            padding: 10px 30px; 
+            cursor: pointer; 
+            border: #2D5883 1px solid; 
+            border-radius: 10px;
+            margin: 5px;
+            /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
+            background-color: #038AAE;
+            color: #fff;
+         }
+      </style>
       <!-- Section: Quote -->
       <section id="quote" class="container-fluid">
          <div class="col-md-7 col-centered" data-center-top="opacity: 1" data-center-bottom="opacity: 0">
