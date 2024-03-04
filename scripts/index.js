@@ -42,8 +42,14 @@ function contar_lugares()
     $.post("ajax/index.php?op=contar_lugares",{idgrupo_simple:idgrupo_simple},function(data, status)
 	{
         data = JSON.parse(data);
-
-        $("#cant_personas").text(data.cant_personas);
+        // alert(data.cant_personas);
+        if (data.cant_personas>0) {
+            $("#cant_personas").text(data.cant_personas);
+        }else{
+            $("#cant_personas").text("");
+        }
+        
+        
 
     });
 }
@@ -137,14 +143,19 @@ function noasistir(idinvitados)
 
 function guardar_confirmacion()
 {
-    $.ajax({
-        type: "POST",
-        url: "ajax/guardar_confirm.php",
-        data: {'array': JSON.stringify(confirm_group)},//capturo array
-        success: function(data){
-            alert(data);
-        }
-    });
+    if (confirm_group.length>0) {
+        $.ajax({
+            type: "POST",
+            url: "ajax/guardar_confirm.php",
+            data: {'array': JSON.stringify(confirm_group)},//capturo array
+            success: function(data){
+                alert(data);
+            }
+        });
+    }else{
+      alert("No se ha podido confirmar tu asistencia, por favor contacta a Orel o a Sarah para que te puedan ayudar.");
+    }
+    
 }
 
 function abrir_datos()
