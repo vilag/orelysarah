@@ -217,7 +217,7 @@ switch ($_GET["op"]){
                         $novios = "Sarah y para mi";
                     }
 
-                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.html?id=".$reg->clave;
+                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave;
 
                     if ($reg->tipo_impresion=="Digital") {
                         $mensaje = "
@@ -247,7 +247,7 @@ switch ($_GET["op"]){
                             Espera tu Invitación Física más adelante ✨
 
                             $link
-                            $hora
+                           
                         
                         ";
                     }
