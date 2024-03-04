@@ -47,6 +47,7 @@ Class Index
 		a.codigo_comp,
 		a.confirmacion,
 		a.clave,
+		a.posicion,
 		(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
 		
 		FROM invitados a";

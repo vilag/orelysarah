@@ -263,7 +263,7 @@ switch ($_GET["op"]){
                                 </textarea>
                             </div>
                             <div style="width: 100%; margin-top: 10px;">
-                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.');">
+                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->posicion.'\');">
                                     <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
                                 </a>
                             </div>
