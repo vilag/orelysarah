@@ -217,7 +217,7 @@ switch ($_GET["op"]){
                         $novios = "Sarah y para mi";
                     }
 
-                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave;
+                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave.$reg->posicion;
 
                     if ($reg->tipo_impresion=="Digital") {
                         $mensaje = "
@@ -263,7 +263,7 @@ switch ($_GET["op"]){
                                 </textarea>
                             </div>
                             <div style="width: 100%; margin-top: 10px;">
-                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->posicion.'\');">
+                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.');">
                                     <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
                                 </a>
                             </div>

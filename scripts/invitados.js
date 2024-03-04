@@ -10,7 +10,7 @@ function listar_invitados()
 }
 
 
-function enviar_inv(idinvitados,posicion)
+function enviar_inv(idinvitados)
 {
     var text_mensaje = $("#text_mensaje"+idinvitados).val();
     //alert(text_mensaje);
