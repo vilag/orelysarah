@@ -12,6 +12,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <meta name="description" content="">
       <meta name="author" content="">
+      <link rel="shortcut icon" href="img/logo/icono.png" />
       <!-- Page title -->
       <title>Sarah & Orel</title>
       <!--[if lt IE 9]>
@@ -190,7 +191,7 @@
          </div>
          <!--/main picture-->
          <div style="margin-top: 40px;;" class="intro-heading col-md-12 text-center" data-0="opacity:1;" data--100-start="transform:translatey(0%);" data-center-bottom="transform:translatey(30%);">
-            <h1 style="font-family: 'Alex Brush', cursive; text-transform: none;">Nuestra Boda
+            <h1 style="font-family: 'Alex Brush', cursive; text-transform: none; font-size: 150px;">Nuestra Boda
             </h1>
             <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
             <!-- <h5 class="margin1 text-ornament">Nos vamos a casar</h5> -->
