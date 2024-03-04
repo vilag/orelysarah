@@ -196,8 +196,9 @@ switch ($_GET["op"]){
     case 'listar_grupo_send':
 
         $quien_envia = $_GET['quien_envia'];
+        $estatus = $_GET['estatus'];
 
-        $rspta = $index->listar_grupo_send();
+        $rspta = $index->listar_grupo_send($estatus);
             
         while ($reg = $rspta->fetch_object())
                 {
@@ -252,18 +253,28 @@ switch ($_GET["op"]){
                         ";
                     }
 
+                    if ($reg->inv_enviada==1) {
+                        $stat = "Invitación enviada";
+                        $color_text = "green";
+                    }
+                    if ($reg->inv_enviada==0) {
+                        $stat = "Invitación sin enviar";
+                        $color_text = "red";
+                    }
+
                     echo '
                         <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
                             Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
                             Nombre: <b>'.$reg->nombre.'</b><br>
                             Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                            Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
                             <div style="width: 100%; margin-top: 10px;">
                                 <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
                                     '.$mensaje.'
                                 </textarea>
                             </div>
                             <div style="width: 100%; margin-top: 10px;">
-                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.');">
+                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
                                     <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
                                 </a>
                             </div>
@@ -271,6 +282,14 @@ switch ($_GET["op"]){
                         
                     ';
                 }
+    break;
+
+    case 'marcar_enviado':
+
+        $idinvitados = $_POST['idinvitados'];
+        $rspta=$index->marcar_enviado($idinvitados);
+        echo json_encode($rspta);
+         
     break;
 	
 }

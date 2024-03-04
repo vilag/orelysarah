@@ -147,4 +147,10 @@ function guardar_confirmacion()
     });
 }
 
+function abrir_datos()
+{
+    var idgrupo = $("#idgrupo").text();
+    $("#a_datos").attr("href","https://wedding-sarah-orel-julio2024.site/datos.php?id="+idgrupo);
+}
+
 init();

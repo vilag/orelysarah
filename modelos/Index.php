@@ -34,23 +34,73 @@ Class Index
 		//return ejecutarConsulta($sql);			
 	}
 
-	public function listar_grupo_send()
+	public function listar_grupo_send($estatus)
+	{
+		if ($estatus==0) {
+			$sql="SELECT
+
+			a.idinvitados,
+			a.nombre,
+			a.parentesco,
+			a.adulto_nino,
+			a.tipo_impresion,
+			a.codigo_comp,
+			a.confirmacion,
+			a.clave,
+			a.posicion,
+			a.inv_enviada,
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			
+			FROM invitados a";
+			return ejecutarConsulta($sql);
+		}
+
+		if ($estatus==1) {
+			$sql="SELECT
+
+			a.idinvitados,
+			a.nombre,
+			a.parentesco,
+			a.adulto_nino,
+			a.tipo_impresion,
+			a.codigo_comp,
+			a.confirmacion,
+			a.clave,
+			a.posicion,
+			a.inv_enviada,
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			
+			FROM invitados a WHERE inv_enviada=1";
+			return ejecutarConsulta($sql);
+		}
+
+		if ($estatus==2) {
+			$sql="SELECT
+
+			a.idinvitados,
+			a.nombre,
+			a.parentesco,
+			a.adulto_nino,
+			a.tipo_impresion,
+			a.codigo_comp,
+			a.confirmacion,
+			a.clave,
+			a.posicion,
+			a.inv_enviada,
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			
+			FROM invitados a WHERE inv_enviada=0";
+			return ejecutarConsulta($sql);
+		}
+		
+
+					
+	}
+
+	public function marcar_enviado($idinvitados)
 	{
 
-		$sql="SELECT
-
-		a.idinvitados,
-		a.nombre,
-		a.parentesco,
-		a.adulto_nino,
-		a.tipo_impresion,
-		a.codigo_comp,
-		a.confirmacion,
-		a.clave,
-		a.posicion,
-		(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
-		
-		FROM invitados a";
+		$sql="UPDATE invitados SET inv_enviada = 1 WHERE idinvitados='$idinvitados'";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}

@@ -9,6 +9,11 @@
     
 </head>
 <body>
+    <div style="width: 100%; padding-left: 20px; margin-bottom: 30px;">
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados();">Recargar</button>
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados_env();">Enviados</button>
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados_noenv();">Sin enviar</button>
+    </div>
     <div style="width: 100%; padding-left: 20px;">
         <label for="">¿Quien envia el mensaje?</label>
         <select name="" id="quien_envia" onchange="listar_invitados();" style="width: 98%; height: 50px; margin-top: 10px;">
