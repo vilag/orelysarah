@@ -9,20 +9,20 @@
     
 </head>
 <body>
-    <div style="width: 100%; padding-left: 20px; margin-bottom: 30px;">
-        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados();">Recargar</button>
-        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados_env();">Enviados</button>
-        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px;" onclick="listar_invitados_noenv();">Sin enviar</button>
+    <div style="width: 95%; padding-left: 20px; margin-bottom: 30px;">
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados();">Recargar</button>
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados_env();">Enviados</button>
+        <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados_noenv();">Sin enviar</button>
     </div>
-    <div style="width: 100%; padding-left: 20px;">
+    <div style="width: 95%; padding-left: 20px;">
         <label for="">¿Quien envia el mensaje?</label>
-        <select name="" id="quien_envia" onchange="listar_invitados();" style="width: 98%; height: 50px; margin-top: 10px;">
+        <select name="" id="quien_envia" onchange="listar_invitados();" style="width: 100%; height: 50px; margin-top: 10px;">
             <option value="1">Sarah</option>
             <option value="2">Orel</option>
         </select>
     </div>
 
-    <div style="width: 100%;" id="lista_invitados">
+    <div style="width: 95%;" id="lista_invitados">
 
     </div>
     

@@ -1019,7 +1019,7 @@
                      <hr>
                      <h5 style="color: rgba(0,0,0,0);">___________</h5>
                      <div style="width: 100%; margin-top: 20px;">
-                        <b onclick="guardar_confirmacion();" style="padding: 10px 40px; background-color: #03678A; color: #fff; font-size: 20px; border-radius: 10px; cursor: pointer;">Enviar confirmación</b>
+                     <button onclick="guardar_confirmacion();" style="padding: 10px 40px; background-color: #03678A; color: #fff; font-size: 18px; border-radius: 10px; cursor: pointer;">Enviar confirmación</button>
                      </div>
                      
 
