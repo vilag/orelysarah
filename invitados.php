@@ -6,8 +6,17 @@
     <title>Invitados</title>
     <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
+    
 </head>
 <body>
+    <div style="width: 100%; padding-left: 20px;">
+        <label for="">¿Quien envia el mensaje?</label>
+        <select name="" id="quien_envia" onchange="listar_invitados();" style="width: 98%; height: 50px; margin-top: 10px;">
+            <option value="1">Sarah</option>
+            <option value="2">Orel</option>
+        </select>
+    </div>
+
     <div style="width: 100%;" id="lista_invitados">
 
     </div>

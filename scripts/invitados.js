@@ -1,6 +1,14 @@
-$.post("ajax/index.php?op=listar_grupo_send",function(r){
-$("#lista_invitados").html(r);
-});
+listar_invitados();
+
+function listar_invitados()
+{
+    var quien_envia = $("#quien_envia").val();
+
+    $.post("ajax/index.php?op=listar_grupo_send&quien_envia="+quien_envia,function(r){
+    $("#lista_invitados").html(r);
+    });
+}
+
 
 function enviar_inv(idinvitados)
 {
