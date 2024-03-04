@@ -28,6 +28,25 @@
     
     
     <!--  -->
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Main Js -->
+      <script src="js/main.js"></script>
+      <!-- RSVP form -->
+      <script src="js/rsvp.js"></script>
+      <!--Other Plugins -->
+      <script src="js/plugins.js"></script>
+      <!-- Prefix free CSS -->
+      <script src="js/prefixfree.js"></script>
+      <!-- maps-->
+      <script src="js/map.js"></script>
+      <!-- Bootstrap Select Tool (For Module #4) -->
+      <script src="switcher/js/bootstrap-select.js"></script>
+      <!-- UI jQuery (For Module #5 and #6) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js" type="text/javascript"></script>
+      <!-- All Scripts & Plugins -->
+      <script src="switcher/js/dmss.js"></script>	
 </body>
 <style>
     @media only screen and (min-width: 1400px) {
