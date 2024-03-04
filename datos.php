@@ -7,7 +7,7 @@
 </head>
 <body>
 <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
-    <div style="width: 88%; height: 180vh; padding: 20px; text-align: center; background-image: url(img/fondo_regalo2.png); background-repeat: no-repeat; background-size: cover;">
+    <div style="width: 88%; height: 230vh; padding: 20px; text-align: center; background-image: url(img/fondo_regalo2.png); background-repeat: no-repeat; background-size: cover;">
         <img src="img/logo/logo_boda_b.png" style="width: 80%;" alt="">
         <div style="width: 100%; margin: 10px; color: #fff;">
             <p>Damos muchas gracias a Dios por estar viviendo esta experiencia tan hermosa, desde el momento en que decidimos comprometernos solo hemos tenido algo en mente, dedicar nuestras vidas al servicios de nuestro Dios.</p>
@@ -25,7 +25,8 @@
             <p>Muchas gracias mi hermano y amigo por esta bendición, pero lo mas importante porfavor te pedimos que nos tengas en tus oraciones, para que el Señor nos use conforme a su voluntad y para su gloria.</p>
             <p>Que Dios te bendiga grandemente!!!</p>
             <hr><br>
-            <a onclick="abrir_website();" id="a_back" href="" style="padding: 10px 50px; border-radius: 10px; background-color: #9B8550; color: #fff; border: none;">Regresar a pagina principal</a>
+            
+            <a onclick="abrir_website();" id="a_back" href="" ><button style="padding: 10px 50px; border-radius: 10px; background-color: #9B8550; color: #fff; border: none;">Regresar a pagina principal</button></a>
 
         </div>
     </div>
