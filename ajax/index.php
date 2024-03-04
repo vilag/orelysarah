@@ -112,7 +112,7 @@ switch ($_GET["op"]){
          
     break;
 
-    case 'listar_grupo_send':
+    case 'listar_grupo_send_':
 
         //$idgrupo = $_GET['idgrupo'];
 
@@ -189,6 +189,62 @@ switch ($_GET["op"]){
                                     
                                 </div>
                             </div>
+                    ';
+                }
+    break;
+
+    case 'listar_grupo_send':
+
+        //$idgrupo = $_GET['idgrupo'];
+
+        $rspta = $index->listar_grupo_send();
+            
+        while ($reg = $rspta->fetch_object())
+                {
+
+                    if ($reg->tipo_impresion=="Digital") {
+                        $mensaje = "
+                            Hola muy buenos días (tarde)!
+                            Es un placer para Orel y para mi (para Sarah y para mi) poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
+                            * Por favor encuentren la Invitación Digital en el siguiente link.
+                            * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en la invitación. 
+
+                            Esperamos con todo nuestro corazón que nos acompañen en ese día tan especial 🤍
+                        ";
+                    }
+
+                    if ($reg->tipo_impresion=="Printed") {
+                        $mensaje = "
+
+                            Hola muy buenos días (tarde)!
+                            Es un placer para Orel y para mi (para Sarah y para mi) poder compartir con ustedes nuestro SAVE THE DATE - RESERVA LA FECHA para Nuestra Boda! 
+                            
+                            Aparta el sábado 13 de Julio 2024 🤍
+
+                            * Por favor encuentren el SAVE THE DATE en el siguiente link.
+                            * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en el link. 
+
+                            Espera tu Invitación Física más adelante ✨
+                        
+                        ";
+                    }
+
+                    echo '
+                        <div style="100%; margin: 5px; background-color: #ccc; padding: 10px 20px;">
+                            Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
+                            Nombre: <b>'.$reg->nombre.'</b><br>
+                            Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                            <div style="width: 100%;">
+                                <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
+                                    '.$mensaje.'
+                                </textarea>
+                            </div>
+                        </div>
+                        <div style="100%;">
+                            <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.');">
+                                <button>Enviar invitación</button>
+                            </a>
+                        </div>
                     ';
                 }
     break;

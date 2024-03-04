@@ -37,7 +37,18 @@ Class Index
 	public function listar_grupo_send()
 	{
 
-		$sql="SELECT idinvitados ,codigo_comp, tipo_impresion FROM invitados GROUP BY codigo_comp";
+		$sql="SELECT
+
+		a.idinvitados,
+		a.nombre,
+		a.parentesco,
+		a.adulto_nino,
+		a.tipo_impresion,
+		a.codigo_comp,
+		a.confirmacion,
+		(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+		
+		FROM invitados a";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}
