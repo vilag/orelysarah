@@ -220,7 +220,7 @@ switch ($_GET["op"]){
 
                     $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave.$reg->posicion;
 
-                    if ($reg->tipo_impresion=="Digital") {
+                    if ($reg->codigo_compg=="Digital") {
                         $mensaje = "
                             Hola muy $tiempo!
                             Es un placer para $novios poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
@@ -234,7 +234,7 @@ switch ($_GET["op"]){
                         ";
                     }
 
-                    if ($reg->tipo_impresion=="Printed") {
+                    if ($reg->codigo_compg=="Printed") {
                         $mensaje = "
 
                             Hola muy $tiempo!
@@ -320,7 +320,7 @@ switch ($_GET["op"]){
 
                     $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave.$reg->posicion;
 
-                    if ($reg->tipo_impresion=="Digital") {
+                    if ($reg->codigo_compg=="Digital") {
                         $mensaje = "
                             Hola muy $tiempo!
                             Es un placer para $novios poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
@@ -334,7 +334,7 @@ switch ($_GET["op"]){
                         ";
                     }
 
-                    if ($reg->tipo_impresion=="Printed") {
+                    if ($reg->codigo_compg=="Printed") {
                         $mensaje = "
 
                             Hola muy $tiempo!
