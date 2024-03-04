@@ -201,6 +201,7 @@ switch ($_GET["op"]){
             
         while ($reg = $rspta->fetch_object())
                 {
+                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.html?id=".$reg->clave;
 
                     if ($reg->tipo_impresion=="Digital") {
                         $mensaje = "
@@ -210,6 +211,8 @@ switch ($_GET["op"]){
                             * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en la invitación. 
 
                             Esperamos con todo nuestro corazón que nos acompañen en ese día tan especial 🤍
+
+                            $link
                         ";
                     }
 
@@ -225,6 +228,8 @@ switch ($_GET["op"]){
                             * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en el link. 
 
                             Espera tu Invitación Física más adelante ✨
+
+                            $link
                         
                         ";
                     }
