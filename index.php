@@ -967,7 +967,7 @@
                   <div id="lightbox">
                      <!-- Image 1 -->
                      <div class="col-lg-12 col-sm-12 col-md-12" style="text-align: center; padding: 0 15%;">
-                        <p style="font-size: 20px; font-weight: 700; line-height: 40px;" class="estilo_texto">Lo más importante para nosotros es tu presencia, pero si deseas obsequiarnos un regalo puedes hacerlo de la siguiente forma.</p><br><br>
+                        <p style="font-size: 20px; font-weight: 700; line-height: 40px;" class="estilo_texto">Lo más importante para nosotros es tu presencia, pero si deseas obsequiarnos un regalo quisiéramos que sepas que no estaremos recibiendo regalos físicos, aunque nos encantaría recibirlos no podríamos llevarlos ya que nos mudaremos de país. Si tu deseo es obsequiarnos algo, puedes hacerlo de la siguiente manera.</p><br><br>
                         <a onclick="abrir_datos();" id="a_datos" href=""><p><button style="padding: 10px 50px; border-radius: 10px; background-color: #9B8550; color: #fff; border: none;"><img src="img/regalo.png" alt="" style="width: 30px; margin-top: -5px;">&nbsp;&nbsp;&nbsp;<b>ENTRAR</b></button></p></a>
                         
                      </div>
