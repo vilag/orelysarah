@@ -225,9 +225,9 @@
                      <!-- <div class="hr"></div> -->
                   </div>
                   <!--/section heading -->
-                  <h5 class="margin1 estilo_texto" style="line-height: 30px;">Por favor confirmanos tu asistencia antes del 15 de junio</h5>
+                  <h5 class="margin1 estilo_texto" style="line-height: 30px;">Por favor confirmanos tu asistencia antes del 1 de junio</h5>
                   <p class="estilo_texto" style="font-size: 18px;">
-                     Los lugares para el banquete son limitados, aunque quisieramos que todos nuestros amigos estuvieran con nosotros sabemos que no podra ser asi, los lugares apartados para ti y que fueron enviados en la invitacion que se te entrego, son demasiado especiales porque tu lo eres para nosotros, es por eso que es muy importante tu confirmación. Esperamos poder verte ese dia y compartir con nosotros la elgria de este nuevo paso en nuestras vidas. <br> Dios te bendiga.
+                     Los lugares para el banquete son limitados, aunque quisieramos que todos nuestros amigos estuvieran con nosotros sabemos que no podrá ser así, los lugares reservados para ti, son demasiado especiales porque tu lo eres para nosotros, es por eso que es muy importante tu confirmación. Esperamos poder verte ese dia y compartir con nosotros la elgria de este nuevo paso en nuestras vidas. <br> Dios te bendiga.
                   </p>
                   <div class="margin1">
                      <!-- countdown tag -->
@@ -309,7 +309,7 @@
          <!-- container -->
          <div class="container">
             <div class="section-heading">
-               <h2 class="estilo_texto">A cerca de los novios</h2>
+               <h2 class="estilo_texto">Sobre los novios</h2>
                <!-- divider -->
                <!-- <div class="hr"></div> -->
             </div>
@@ -743,7 +743,7 @@
                   <hr>
                   <p class="estilo_texto">
 
-                     Como pareja hemos aprendido a confiar y depender más en Dios, Él nos sigue moldeando para servirle con nuestros dones y talentos, ahora que daremos este paso en nuestras vidas, queremos darle gracias por que hasta aqui ha sido fiel y junto con ustedes poder darle la honra y la gloria a Dios por medio de este culto de accion de gracias. 
+                     Como pareja hemos aprendido a confiar y depender más en Dios, Él nos sigue moldeando para servirle con nuestros dones y talentos, ahora que daremos este paso en nuestras vidas, queremos darle gracias por que hasta aqui ha sido fiel y junto con ustedes poder darle la honra y la gloria a Dios por medio de este culto de acción de gracias. 
                      
                      <!-- Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat Elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset phas ellus ac sodales Lorem ipsum dolor Phas ellus  -->
                   </p>
@@ -810,7 +810,7 @@
                   <h3 class="estilo_texto">Recepción</h3>
                   <hr>
                   <p class="estilo_texto">
-                     Despues del culto de acción de gracias será una bendicion para nosotros contar con su presencia en un banquete que ofreceremos para nuestra familia y amigos, cada momento que podamos disfrutar con ustedes sera un recuerdo muy especial. <br>
+                     Después del culto de acción de gracias, será una bendicion para nosotros contar con su presencia en un banquete que ofreceremos para nuestra familia y amigos, cada momento que podamos disfrutar con ustedes sera un recuerdo muy especial. <br>
                       
                   </p>
                   <hr>
