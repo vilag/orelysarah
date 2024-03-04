@@ -106,7 +106,7 @@ switch ($_GET["op"]){
 
     case 'contar_lugares':
 
-        $idgrupo = $_POST['idgrupo'];
+        $idgrupo = $_POST['idgrupo_simple'];
         $rspta=$index->contar_lugares($idgrupo);
         echo json_encode($rspta);
          

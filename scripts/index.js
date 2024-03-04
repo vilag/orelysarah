@@ -24,10 +24,10 @@ function listar_grupo()
 {
     var idgrupo = $("#idgrupo").text();
     var posicion = idgrupo.substring(idgrupo.length, idgrupo.length-1);
-    var idgrupo_simple = idgrupo.substring(5, 5+posicion);
-    alert(idgrupo_simple);
+    var pos_final = 5+parseInt(posicion);
+    var idgrupo_simple = idgrupo.substring(5, pos_final);
    
-    $.post("ajax/index.php?op=listar_grupo&idgrupo="+idgrupo,function(r){
+    $.post("ajax/index.php?op=listar_grupo&idgrupo="+idgrupo_simple,function(r){
     $("#lista_inf_group").html(r);
     });
 }
@@ -35,7 +35,11 @@ function listar_grupo()
 function contar_lugares()
 {
     var idgrupo = $("#idgrupo").text();
-    $.post("ajax/index.php?op=contar_lugares",{idgrupo:idgrupo},function(data, status)
+    var posicion = idgrupo.substring(idgrupo.length, idgrupo.length-1);
+    var pos_final = 5+parseInt(posicion);
+    var idgrupo_simple = idgrupo.substring(5, pos_final);
+
+    $.post("ajax/index.php?op=contar_lugares",{idgrupo_simple:idgrupo_simple},function(data, status)
 	{
         data = JSON.parse(data);
 
