@@ -8,7 +8,7 @@
 <body>
 <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
     <div style="width: 88%; height: 230vh; padding: 20px; text-align: center; background-image: url(img/fondo_regalo2.png); background-repeat: no-repeat; background-size: cover;">
-        <img src="img/logo/logo_boda_b.png" style="width: 80%;" alt="">
+        <img src="img/logo/logo_boda_b3.png" style="width: 80%;" alt="">
         <div style="width: 100%; margin: 10px; color: #fff;">
             <p>Damos muchas gracias a Dios por estar viviendo esta experiencia tan hermosa, desde el momento en que decidimos comprometernos solo hemos tenido algo en mente, dedicar nuestras vidas al servicios de nuestro Dios.</p>
             <p>Este llamado ha sido confirmado en nuestras vidas desde antes de decidir unir nuestras vidas y ahora que estamos a poco tiempo rogamos a nuestro Dios nos guie conforme a su voluntad agradable y perfecta.</p>
