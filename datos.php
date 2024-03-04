@@ -24,7 +24,7 @@
             <hr>
             <p>Muchas gracias mi hermano y amigo por esta bendición pero lo mas importante porfavor te pedimos que nos tengas en tus oraciones, para que el Señor nos use conforme a su voluntad y para su gloria.</p>
             <p>Que Dios te bendiga!!!</p>
-            <p><a id="a_back" href="index.php"><p><button style="padding: 10px 50px; border-radius: 10px; background-color: #9B8550; color: #fff; border: none;"><img src="img/regalo.png" alt="" style="width: 30px; margin-top: -5px;">&nbsp;&nbsp;&nbsp;<b>Regresar</b></button></p></a></p>
+            <p><a onclick="abrir_website();" id="a_back" href=""><p><button style="padding: 10px 50px; border-radius: 10px; background-color: #9B8550; color: #fff; border: none;"><b>Regresar</b></button></p></a></p>
 
         </div>
     </div>
