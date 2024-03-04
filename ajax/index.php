@@ -291,6 +291,98 @@ switch ($_GET["op"]){
         echo json_encode($rspta);
          
     break;
+
+    case 'listar_grupo_send_buscar':
+
+        $quien_envia = $_GET['quien_envia'];
+        $estatus = $_GET['estatus'];
+        $buscar = $_GET['buscar'];
+
+        $rspta = $index->listar_grupo_send_buscar($estatus,$buscar);
+            
+        while ($reg = $rspta->fetch_object())
+                {
+                    date_default_timezone_set('America/Mexico_City');
+                    $hora = date("G");
+                    if ($hora>=0 AND $hora<=11) {
+                        $tiempo = "días";
+                    }
+                    if ($hora>=12 AND $hora<=23) {
+                        $tiempo = "tardes";
+                    }
+
+                    if ($quien_envia=="1") {
+                        $novios = "Orel y para mi";
+                    }
+                    if ($quien_envia=="2") {
+                        $novios = "Sarah y para mi";
+                    }
+
+                    $link = "https://wedding-sarah-orel-julio2024.site/invitacion_digital.php?id=".$reg->clave.$reg->posicion;
+
+                    if ($reg->tipo_impresion=="Digital") {
+                        $mensaje = "
+                            Hola muy buenos $tiempo!
+                            Es un placer para $novios poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
+                            * Por favor encuentren la Invitación Digital en el siguiente link.
+                            * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en la invitación. 
+
+                            Esperamos con todo nuestro corazón que nos acompañen en ese día tan especial 🤍
+
+                            $link
+                            
+                        ";
+                    }
+
+                    if ($reg->tipo_impresion=="Printed") {
+                        $mensaje = "
+
+                            Hola muy buenos $tiempo!
+                            Es un placer para $novios poder compartir con ustedes nuestro SAVE THE DATE - RESERVA LA FECHA para Nuestra Boda! 
+                            
+                            Aparta el sábado 13 de Julio 2024 🤍
+
+                            * Por favor encuentren el SAVE THE DATE en el siguiente link.
+                            * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en el link. 
+
+                            Espera tu Invitación Física más adelante ✨
+
+                            $link
+                           
+                        
+                        ";
+                    }
+
+                    if ($reg->inv_enviada==1) {
+                        $stat = "Invitación enviada";
+                        $color_text = "green";
+                    }
+                    if ($reg->inv_enviada==0) {
+                        $stat = "Invitación sin enviar";
+                        $color_text = "red";
+                    }
+
+                    echo '
+                        <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
+                            Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
+                            Nombre: <b>'.$reg->nombre.'</b><br>
+                            Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                            Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
+                            <div style="width: 100%; margin-top: 10px;">
+                                <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
+                                    '.$mensaje.'
+                                </textarea>
+                            </div>
+                            <div style="width: 100%; margin-top: 10px;">
+                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
+                                    <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    ';
+                }
+    break;
 	
 }
 ?>

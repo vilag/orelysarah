@@ -15,6 +15,9 @@
         <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados_env();">Enviados</button>
         <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados_noenv();">Sin enviar</button>
     </div>
+    <div style="width: 95%; padding-left: 20px; margin-bottom: 30px;">
+        <input type="text" id="input_buscar" style="height: 30px;"><button style="height: 30px;" onclick="buscar_persona();">Buscar</button><button style="height: 30px;" onclick="listar_invitados();">Limpiar</button>
+    </div>
     <div style="width: 95%; padding-left: 20px;">
         <label for="">¿Quien envia el mensaje?</label>
         <select name="" id="quien_envia" onchange="listar_invitados();" style="width: 100%; height: 50px; margin-top: 10px;">

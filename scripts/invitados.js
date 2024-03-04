@@ -48,3 +48,13 @@ function enviar_inv(idinvitados, nombre)
     });
     
 }
+
+function buscar_persona()
+{
+    var input_buscar = $("#input_buscar").val();
+    var quien_envia = $("#quien_envia").val();
+
+    $.post("ajax/index.php?op=listar_grupo_send_buscar&quien_envia="+quien_envia+"&estatus="+0+"&buscar="+input_buscar,function(r){
+    $("#lista_invitados").html(r);
+    });
+}

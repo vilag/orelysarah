@@ -97,6 +97,29 @@ Class Index
 					
 	}
 
+	public function listar_grupo_send_buscar($estatus,$buscar)
+	{
+	
+			$sql="SELECT
+
+			a.idinvitados,
+			a.nombre,
+			a.parentesco,
+			a.adulto_nino,
+			a.tipo_impresion,
+			a.codigo_comp,
+			a.confirmacion,
+			a.clave,
+			a.posicion,
+			a.inv_enviada,
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			
+			FROM invitados a WHERE a.nombre LIKE '%".$buscar."%'";
+			return ejecutarConsulta($sql);
+	
+					
+	}
+
 	public function marcar_enviado($idinvitados)
 	{
 
