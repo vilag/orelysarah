@@ -7,7 +7,7 @@
 </head>
 <body>
 <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
-    <div style="width: 100%; height: 180vh; padding: 20px; text-align: center; background-image: url(img/fondo_regalo2.png); background-repeat: no-repeat; background-size: cover;">
+    <div style="width: 88%; height: 180vh; padding: 20px; text-align: center; background-image: url(img/fondo_regalo2.png); background-repeat: no-repeat; background-size: cover;">
         <img src="img/logo/logo_boda_b.png" style="width: 80%;" alt="">
         <div style="width: 100%; margin: 10px; color: #fff;">
             <p>Damos muchas gracias a Dios por estar viviendo esta experiencia tan hermosa, desde el momento en que decidimos comprometernos solo hemos tenido algo en mente, dedicar nuestras vidas al servicios de nuestro Dios.</p>
