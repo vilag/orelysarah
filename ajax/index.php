@@ -205,10 +205,10 @@ switch ($_GET["op"]){
                     date_default_timezone_set('America/Mexico_City');
                     $hora = date("G");
                     if ($hora>=0 AND $hora<=11) {
-                        $tiempo = "días";
+                        $tiempo = "buenos días";
                     }
                     if ($hora>=12 AND $hora<=23) {
-                        $tiempo = "tardes";
+                        $tiempo = "buenas tardes";
                     }
 
                     if ($quien_envia=="1") {
@@ -222,7 +222,7 @@ switch ($_GET["op"]){
 
                     if ($reg->tipo_impresion=="Digital") {
                         $mensaje = "
-                            Hola muy buenos $tiempo!
+                            Hola muy $tiempo!
                             Es un placer para $novios poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
                             * Por favor encuentren la Invitación Digital en el siguiente link.
                             * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en la invitación. 
@@ -237,7 +237,7 @@ switch ($_GET["op"]){
                     if ($reg->tipo_impresion=="Printed") {
                         $mensaje = "
 
-                            Hola muy buenos $tiempo!
+                            Hola muy $tiempo!
                             Es un placer para $novios poder compartir con ustedes nuestro SAVE THE DATE - RESERVA LA FECHA para Nuestra Boda! 
                             
                             Aparta el sábado 13 de Julio 2024 🤍
@@ -305,10 +305,10 @@ switch ($_GET["op"]){
                     date_default_timezone_set('America/Mexico_City');
                     $hora = date("G");
                     if ($hora>=0 AND $hora<=11) {
-                        $tiempo = "días";
+                        $tiempo = " buenos días";
                     }
                     if ($hora>=12 AND $hora<=23) {
-                        $tiempo = "tardes";
+                        $tiempo = "buenas tardes";
                     }
 
                     if ($quien_envia=="1") {
@@ -322,7 +322,7 @@ switch ($_GET["op"]){
 
                     if ($reg->tipo_impresion=="Digital") {
                         $mensaje = "
-                            Hola muy buenos $tiempo!
+                            Hola muy $tiempo!
                             Es un placer para $novios poderles invitar a Nuestra Boda!! La cual se celebrará el 13 de julio 2024 en Guadalajara.
                             * Por favor encuentren la Invitación Digital en el siguiente link.
                             * Ayúdanos a confirma tu asistencia antes del 1ro de Junio en el botón que se encuentra en la invitación. 
@@ -337,7 +337,7 @@ switch ($_GET["op"]){
                     if ($reg->tipo_impresion=="Printed") {
                         $mensaje = "
 
-                            Hola muy buenos $tiempo!
+                            Hola muy $tiempo!
                             Es un placer para $novios poder compartir con ustedes nuestro SAVE THE DATE - RESERVA LA FECHA para Nuestra Boda! 
                             
                             Aparta el sábado 13 de Julio 2024 🤍
