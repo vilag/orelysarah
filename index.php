@@ -1014,6 +1014,15 @@
                      <h3>Lugares en tu honor</h3>
                      <hr>
                      <h5 style="line-height: 30px;">Por favor confirma la asistencia por cada lugar reservado</h5>
+                     <div style="width: 100%; text-align: left !important;">
+                        <p>Para confirmar sigue los siguientes pasos: <br>
+                        <b>1. Busca tu nombre en la siguiente lista</b><br>
+                        <b>2. Selecciona una de las dos opciones (Asistiré, No asistiré)</b><br>
+                        <b>3. Click en Enviar Confirmación</b><br>  
+                         
+                        De esta forma tu confirmación quedará reservada.
+                     </div>
+                     </p>
                      <div  style="width: 100%;" id="lista_inf_group">
 
                      </div>
