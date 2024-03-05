@@ -227,7 +227,7 @@
                   <!--/section heading -->
                   <h5 class="margin1 estilo_texto" style="line-height: 30px;">Por favor confirmanos tu asistencia antes del 1 de junio</h5>
                   <p class="estilo_texto" style="font-size: 18px;">
-                     Los lugares para el banquete son limitados, aunque quisieramos que todos nuestros amigos estuvieran con nosotros sabemos que no podrá ser así, los lugares reservados para ti, son demasiado especiales porque tu lo eres para nosotros, es por eso que es muy importante tu confirmación. Esperamos poder verte ese dia y compartir con nosotros la elgria de este nuevo paso en nuestras vidas. <br> Dios te bendiga.
+                     Los lugares para el banquete son limitados, aunque quisieramos que todos nuestros amigos estuvieran con nosotros sabemos que no podrá ser así, los lugares reservados para ti, son demasiado especiales porque tu lo eres para nosotros, es por eso que es muy importante tu confirmación. Esperamos poder verte ese dia y compartir con nosotros la alegria de este nuevo paso en nuestras vidas. <br> Dios te bendiga.
                   </p>
                   <div class="margin1">
                      <!-- countdown tag -->
