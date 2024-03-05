@@ -11,7 +11,7 @@
 </head>
 <body style="display: flex; justify-content: center;">
     <b id="idgrupo" style="display: none;"><?php echo $_GET['id']; ?></b>
-    <img src="img/invitacion_digital2.jpg" alt="" class="tam_inv flip-in-ver-left">
+    <img src="img/invitacion_digital3.jpg" alt="" class="tam_inv flip-in-ver-left">
     <div id="btn_confirm" class="posicion_boton slide-in-blurred-left">
         <a id="btn_confirm_send" style=" font-family: 'Montserrat', sans-serif; padding: 7px 12px;  border: #ccc 1px solid; text-decoration: none; background-color: #9B8550; color: beige; border-radius: 10px; font-size: 15px; " href="" onclick="abrir_website();">Confirmar Asistencia</a>
     </div>
