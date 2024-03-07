@@ -89,7 +89,7 @@ Class Index
 			a.inv_enviada,
 			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
 			
-			FROM invitados a WHERE a.inv_enviada=0 AND a.confirmacion==0";
+			FROM invitados a WHERE a.inv_enviada=0 AND a.confirmacion=0";
 			return ejecutarConsulta($sql);
 		}
 		
