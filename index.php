@@ -805,7 +805,7 @@
                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14927.875300845606!2d-103.3232805!3d20.7114905!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1ad77eb17a3%3A0x3eaf26a3caa74df3!2zSmFyZMOtbiBHZXRzZW1hbsOt!5e0!3m2!1ses!2smx!4v1705021830733!5m2!1ses!2smx" style="border:0; width: 100%; height: 380px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
             <!-- paper well with effect -->
-            <div class="well col-lg-6 col-lg-offset-7 col-md-6 col-md-offset-7 " data-start="left: 20%;" data-center="left:0%;">
+            <div class="well col-lg-6 col-lg-offset-7 col-md-6 col-md-offset-7 position_recepcion" data-start="left: 20%;" data-center="left:0%;">
                <div class="col-md-12 text-center">
                   <h3 class="estilo_texto">Recepción</h3>
                   <hr>
@@ -832,6 +832,87 @@
          <!-- /row-fluid -->
       </section>
       <!-- Section ends -->
+
+      <style>
+         /* .position_recepcion{
+            margin-left: 733px !important;
+            
+         } */
+
+         @media only screen and (max-width: 340px){
+            .position_recepcion{
+               margin-left: 0px !important;
+            }
+         }
+
+         @media only screen and (min-width: 340px) and (max-width: 992px) {
+            .position_recepcion{
+               margin-left: 0px !important;
+            }
+         }
+
+         @media only screen and (min-width: 992px) and (max-width: 1100px){
+            .position_recepcion{
+               margin-left: 500px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 350px;
+            }
+         }
+
+         @media only screen and (min-width: 1100px) and (max-width: 1200px){
+            .position_recepcion{
+               margin-left: 550px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 200px;
+            }
+         }
+
+         @media only screen and (min-width: 1200px) and (max-width: 1400px){
+            .position_recepcion{
+               margin-left: 600px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 200px;
+            }
+         }
+
+         @media only screen and (min-width: 1400px) and (max-width: 1500px){
+            .position_recepcion{
+               margin-left: 600px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 150px;
+            }
+         }
+
+         @media only screen and (min-width: 1500px) and (max-width: 1800px){
+            .position_recepcion{
+               margin-left: 700px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 100px;
+            }
+         }
+
+         @media only screen and (min-width: 1800px){
+            .position_recepcion{
+               margin-left: 800px !important;
+
+            }
+            .posicion_regalos{
+               margin-top: 50px;
+            }
+         }
+
+        
+      </style>
       
       <!-- Section: Registry -->
       
@@ -945,7 +1026,7 @@
       <!-- /Section ends -->
 
       <!-- Section: Gallery -->
-      <section id="gallery" class="watercolor">
+      <section id="gallery" class="watercolor posicion_regalos">
          <div class="section-heading text-center">
             <h2 class="estilo_texto">Regalos</h2>
             <!-- divider -->
