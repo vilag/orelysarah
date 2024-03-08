@@ -262,25 +262,74 @@ switch ($_GET["op"]){
                         $color_text = "red";
                     }
 
-                    echo '
-                        <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
-                            Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
-                            Nombre: <b>'.$reg->nombre.'</b><br>
-                            Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
-                            Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
-                            <div style="width: 100%; margin-top: 10px;">
-                                <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
-                                    '.$mensaje.'
-                                </textarea>
+                    if ($estatus==0) {
+                        echo '
+                            <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
+                                Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
+                                Nombre: <input type="text" id="input_nom'.$reg->idinvitados.'" value="'.$reg->nombre.'" onchange="update_nombre('.$reg->idinvitados.');"><br>
+                                Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                                Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
+                                        '.$mensaje.'
+                                    </textarea>
+                                </div>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
+                                        <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
+                                    </a>
+                                    
+                                </div>
                             </div>
-                            <div style="width: 100%; margin-top: 10px;">
-                                <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
-                                    <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
-                                </a>
+                            
+                        ';
+                    }
+                    if (($estatus==1 AND $reg->inv_grupo>0)) {
+                        echo '
+                            <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
+                                Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
+                                Nombre: <input type="text" id="input_nom'.$reg->idinvitados.'" value="'.$reg->nombre.'" onchange="update_nombre('.$reg->idinvitados.');"><br>
+                                Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                                Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
+                                        '.$mensaje.'
+                                    </textarea>
+                                </div>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
+                                        <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
+                                    </a>
+                                    
+                                </div>
                             </div>
-                        </div>
-                        
-                    ';
+                            
+                        ';
+                    }
+                    if ($estatus==2 AND $reg->inv_grupo==0) {
+                        echo '
+                            <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
+                                Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
+                                Nombre: <input type="text" id="input_nom'.$reg->idinvitados.'" value="'.$reg->nombre.'" onchange="update_nombre('.$reg->idinvitados.');"><br>
+                                Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
+                                Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <textarea name="" id="text_mensaje'.$reg->idinvitados.'"  rows="10" style="width: 100%;">
+                                        '.$mensaje.'
+                                    </textarea>
+                                </div>
+                                <div style="width: 100%; margin-top: 10px;">
+                                    <a id="btn_enviar_inv'.$reg->idinvitados.'" href="#" target="_blank" onclick="enviar_inv('.$reg->idinvitados.',\''.$reg->nombre.'\');">
+                                        <button style="padding: 10px 30px; background-color: #2672A7; color: #fff; border: none; border-radius: 10px;">Enviar invitación</button>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            
+                        ';
+                    }
+
+                    
                 }
     break;
 
@@ -365,7 +414,7 @@ switch ($_GET["op"]){
                     echo '
                         <div style="100%; margin: 10px; background-color: #E7EEF3; color: #000; padding: 20px 20px; line-height: 25px; border-radius: 10px;">
                             Codigo invitación: <b>'.$reg->codigo_comp.'</b><br>
-                            Nombre: <b>'.$reg->nombre.'</b><br>
+                            Nombre: <input type="text" id="input_nom'.$reg->idinvitados.'" value="'.$reg->nombre.'" onchange="update_nombre('.$reg->idinvitados.');"><br>
                             Tipo de impresión: <b>'.$reg->codigo_compg.'</b><br>
                             Estatus: <b style="color: '.$color_text.';">'.$stat.'</b><br>
                             <div style="width: 100%; margin-top: 10px;">
@@ -382,6 +431,15 @@ switch ($_GET["op"]){
                         
                     ';
                 }
+    break;
+
+    case 'update_nombre':
+
+        $idinvitados = $_POST['idinvitados'];
+        $nombre = $_POST['nombre'];
+        $rspta=$index->update_nombre($idinvitados,$nombre);
+        echo json_encode($rspta);
+         
     break;
 	
 }

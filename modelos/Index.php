@@ -49,7 +49,8 @@ Class Index
 			a.clave,
 			a.posicion,
 			a.inv_enviada,
-			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg,
+			(SELECT count(inv_enviada) FROM invitados WHERE codigo_comp = a.codigo_comp AND inv_enviada=1) as inv_grupo
 			
 			FROM invitados a";
 			return ejecutarConsulta($sql);
@@ -68,7 +69,8 @@ Class Index
 			a.clave,
 			a.posicion,
 			a.inv_enviada,
-			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg,
+			(SELECT count(inv_enviada) FROM invitados WHERE codigo_comp = a.codigo_comp AND inv_enviada=1) as inv_grupo
 			
 			FROM invitados a WHERE inv_enviada=1";
 			return ejecutarConsulta($sql);
@@ -87,7 +89,8 @@ Class Index
 			a.clave,
 			a.posicion,
 			a.inv_enviada,
-			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg
+			(SELECT tipo_impresion FROM invitados WHERE codigo_comp = a.codigo_comp AND tipo_impresion<>'') as codigo_compg,
+			(SELECT count(inv_enviada) FROM invitados WHERE codigo_comp = a.codigo_comp AND inv_enviada=1) as inv_grupo
 			
 			FROM invitados a WHERE a.inv_enviada=0 AND a.confirmacion=0";
 			return ejecutarConsulta($sql);
@@ -124,6 +127,14 @@ Class Index
 	{
 
 		$sql="UPDATE invitados SET inv_enviada = 1 WHERE idinvitados='$idinvitados'";
+		//return ejecutarConsultaSimpleFila($sql);
+		return ejecutarConsulta($sql);			
+	}
+
+	public function update_nombre($idinvitados, $nombre)
+	{
+
+		$sql="UPDATE invitados SET nombre = '$nombre' WHERE idinvitados='$idinvitados'";
 		//return ejecutarConsultaSimpleFila($sql);
 		return ejecutarConsulta($sql);			
 	}

@@ -58,3 +58,15 @@ function buscar_persona()
     $("#lista_invitados").html(r);
     });
 }
+
+function update_nombre(idinvitados)
+{
+    var nombre = $("#input_nom"+idinvitados).val();
+
+    $.post("ajax/index.php?op=update_nombre",{idinvitados:idinvitados,nombre:nombre},function(data, status)
+	{
+        data = JSON.parse(data);
+
+    });
+
+}

@@ -743,7 +743,7 @@
                   <hr>
                   <p class="estilo_texto">
 
-                     Como pareja hemos aprendido a confiar y depender más en Dios, Él nos sigue moldeando para servirle con nuestros dones y talentos, ahora que daremos este paso en nuestras vidas, queremos darle gracias por que hasta aqui ha sido fiel y junto con ustedes poder darle la honra y la gloria a Dios por medio de este culto de acción de gracias. 
+                     Como pareja hemos aprendido a confiar y depender más en Dios, Él nos sigue moldeando para servirle con nuestros dones y talentos, ahora que daremos este paso en nuestras vidas, queremos darle gracias a Dios por que hasta aqui ha sido fiel y junto con ustedes poder darle la honra y la gloria por medio de este culto de acción de gracias. 
                      
                      <!-- Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat Elit uasi quidem minus id omnis a nibh fusce mollis imperdie tlorem ipuset phas ellus ac sodales Lorem ipsum dolor Phas ellus  -->
                   </p>
