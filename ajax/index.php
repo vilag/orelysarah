@@ -441,6 +441,138 @@ switch ($_GET["op"]){
         echo json_encode($rspta);
          
     break;
+
+    case 'listar_tbl_invitados':
+
+        $rspta = $index->listar_tbl_invitados();
+            
+        while ($reg = $rspta->fetch_object())
+                {
+                    if ($reg->entrega_fisica == 0) {
+                        $elemento = "<button onclick='marcar_entrega(".$reg->idinvitados.");' style='padding: 2px; background-color: #000; color: #fff; box-shadow: 5px 5px 10px rgba(0,0,0,0.1);'>Marcar</button>";
+                    }
+                    if ($reg->entrega_fisica == 1) {
+                        $elemento = "<b onclick='marcar_no_entrega(".$reg->idinvitados.");' style='padding: 2px; background-color: green; color: #fff; border-radius: 5px;'>Entregado</b>";
+                    }
+
+                    if ($reg->confirmacion==0) {
+                        $text_boton = "Sin confirmar";   
+                        $estilo = "background-color: gray; color: #fff;";  
+                    }
+                    if ($reg->confirmacion==1) {
+                        $text_boton = "Asistirá";
+                        $estilo = "background-color: green; color: #fff;";
+                    }
+                    if ($reg->confirmacion==2) {
+                        $text_boton = "No Asistirá";
+                        $estilo = "background-color: red; color: #fff;";
+                    }
+                    
+                    echo '
+
+                    <tr>
+                        <td>'.$reg->idinvitados.'</td>
+                        <td>'.$reg->nombre.'</td>
+                        <td>'.$reg->parentesco.'</td>
+                        <td>'.$reg->adulto_nino.'</td>
+                        <td><input type="text" id="input_tipo_imp'.$reg->idinvitados.'" value="'.$reg->tipo_impresion.'" onchange="update_tipo_imp('.$reg->idinvitados.');"></td>
+                        <td>'.$reg->codigo_comp.'</td>
+                        <td>'.$reg->inv_enviada.'</td>
+                        <td style="text-align: center;">'.$elemento.'</td>
+                        <td><button onclick="cambiar_confirm('.$reg->idinvitados.',\''.$reg->confirmacion.'\');" style="'.$estilo.'">'.$text_boton.'</button></td>
+                    </tr>
+                        
+                    ';
+                }
+    break;
+
+    case 'listar_tbl_invitados_filtro':
+
+        $dato = $_GET['dato'];
+
+        $rspta = $index->listar_tbl_invitados_filtro($dato);
+            
+        while ($reg = $rspta->fetch_object())
+                {
+                    if ($reg->entrega_fisica == 0) {
+                        $elemento = "<button onclick='marcar_entrega(".$reg->idinvitados.");' style='padding: 2px; background-color: #000; color: #fff; box-shadow: 5px 5px 10px rgba(0,0,0,0.1);'>Marcar</button>";
+                    }
+                    if ($reg->entrega_fisica == 1) {
+                        $elemento = "<b onclick='marcar_no_entrega(".$reg->idinvitados.");' style='padding: 2px; background-color: green; color: #fff; border-radius: 5px;'>Entregado</b>";
+                    }
+
+                    if ($reg->confirmacion==0) {
+                        $text_boton = "Sin confirmar";   
+                        $estilo = "background-color: gray; color: #fff;";  
+                    }
+                    if ($reg->confirmacion==1) {
+                        $text_boton = "Asistirá";
+                        $estilo = "background-color: green; color: #fff;";
+                    }
+                    if ($reg->confirmacion==2) {
+                        $text_boton = "No Asistirá";
+                        $estilo = "background-color: red; color: #fff;";
+                    }
+                    
+                    echo '
+
+                    <tr>
+                        <td>'.$reg->idinvitados.'</td>
+                        <td>'.$reg->nombre.'</td>
+                        <td>'.$reg->parentesco.'</td>
+                        <td>'.$reg->adulto_nino.'</td>
+                        <td><input type="text" id="input_tipo_imp'.$reg->idinvitados.'" value="'.$reg->tipo_impresion.'" onchange="update_tipo_imp('.$reg->idinvitados.');"></td>
+                        <td>'.$reg->codigo_comp.'</td>
+                        <td>'.$reg->inv_enviada.'</td>
+                        <td style="text-align: center;">'.$elemento.'</td>
+                        <td><button onclick="cambiar_confirm('.$reg->idinvitados.',\''.$reg->confirmacion.'\');" style="'.$estilo.'">'.$text_boton.'</button></td>
+                    </tr>
+                        
+                    ';
+                }
+    break;
+
+    case 'marcar_entrega':
+
+        $idinvitados = $_POST['idinvitados'];
+        $rspta=$index->marcar_entrega($idinvitados);
+        echo json_encode($rspta);
+         
+    break;
+
+    case 'marcar_no_entrega':
+
+        $idinvitados = $_POST['idinvitados'];
+        $rspta=$index->marcar_no_entrega($idinvitados);
+        echo json_encode($rspta);
+         
+    break;
+
+    case 'contar_personas':
+
+        // $idinvitados = $_POST['idinvitados'];
+        $rspta=$index->contar_personas();
+        echo json_encode($rspta);
+         
+    break;
+
+    case 'update_tipo_imp':
+
+        $idinvitados = $_POST['idinvitados'];
+        $tipo_impresion = $_POST['tipo_impresion'];
+        $rspta=$index->update_tipo_imp($idinvitados,$tipo_impresion);
+        echo json_encode($rspta);
+         
+    break;
+
+    case 'cambiar_confirm':
+
+        $idinvitados = $_POST['idinvitados'];
+        $confirmacion = $_POST['confirmacion'];
+        $rspta=$index->cambiar_confirm($idinvitados,$confirmacion);
+        echo json_encode($rspta);
+         
+    break;
 	
 }
 ?>
