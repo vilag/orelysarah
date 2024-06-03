@@ -23,10 +23,10 @@ function buscar_persona(){
 function listar_grupo()
 {
     var idgrupo = $("#idgrupo").text();
-    alert(idgrupo);
+    //alert(idgrupo);
     var posicion = idgrupo.substring(idgrupo.length, idgrupo.length-1);
-    alert(idgrupo.length);
-    alert(posicion);
+    //alert(idgrupo.length);
+    //alert(posicion);
     var pos_final = 5+parseInt(posicion);
     var idgrupo_simple = idgrupo.substring(5, pos_final);
    
