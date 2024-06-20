@@ -15,6 +15,10 @@
             border: #ccc 1px solid;
         }
     </style>
+    <div style="width: 100%;">
+        <button onclick="ver_vista1();">Lista</button>
+        <button onclick="ver_vista2();">Lista 2</button>
+    </div>
     <div style="width: 100%; float: left; padding: 20px;">
         Adultos:&nbsp;<b style="font-size: 20px;" id="cant_adultos"></b>&nbsp;&nbsp;Niños:&nbsp;<b style="font-size: 20px;" id="cant_ninos"></b>
     </div>
@@ -31,7 +35,7 @@
         <button style="background-color: green; color: #fff; padding: 10px; border-radius: 10px; border: none; box-shadow: 5px 5px 10px rgba(0,0,0,0.2);" onclick="filtro(6);">Asistirán&nbsp;<b id="cant_asisten_n"></b>&nbsp;(Niños)</button>
         <button style="background-color: red; color: #fff; padding: 10px; border-radius: 10px; border: none; box-shadow: 5px 5px 10px rgba(0,0,0,0.2);" onclick="filtro(7);">No Asistirán&nbsp;<b id="cant_no_asisten_n"></b>&nbsp;(Niños)</button>
     </div>
-    <div style="width: 100%;">
+    <div style="width: 100%;" id="tbl_lista1">
         <table class="estilo_tabla">
             <thead>
                 <tr>
@@ -52,7 +56,7 @@
         </table>
     </div>
     
-    <div style="width: 100%; display: none;">
+    <div style="width: 100%; display: none;" id="tbl_lista2">
         <div style="width: 95%; padding-left: 20px; margin-bottom: 30px;">
             <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados();">Recargar</button>
             <button style="padding: 10px 30px; background-color: #000; color: #fff; border: none; border-radius: 10px; margin: 5px;" onclick="listar_invitados_env();">Enviados</button>

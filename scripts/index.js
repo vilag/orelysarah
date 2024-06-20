@@ -29,6 +29,7 @@ function listar_grupo()
     //alert(posicion);
     var pos_final = 5+parseInt(posicion);
     var idgrupo_simple = idgrupo.substring(5, pos_final);
+    //alert(idgrupo_simple);
    
     $.post("ajax/index.php?op=listar_grupo&idgrupo="+idgrupo_simple,function(r){
     $("#lista_inf_group").html(r);

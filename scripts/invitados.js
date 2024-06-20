@@ -164,3 +164,15 @@ function cambiar_confirm(idinvitados, confirmacion){
     });
 
 }
+
+function ver_vista1()
+{
+    document.getElementById("tbl_lista1").style.display = "block";
+    document.getElementById("tbl_lista2").style.display = "none";
+}
+
+function ver_vista2()
+{
+    document.getElementById("tbl_lista1").style.display = "none";
+    document.getElementById("tbl_lista2").style.display = "block";
+}
